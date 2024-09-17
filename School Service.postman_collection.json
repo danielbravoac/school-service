@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "2a72132e-4df7-4a8b-b1c9-4a91b125ac26",
+		"name": "School Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16010241"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "getCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/courses"
+					},
+					"response": []
+				},
+				{
+					"name": "getCourse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/courses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "createCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"HTML Básico\",\r\n    \"acronym\":\"HTM-Base\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/courses"
+					},
+					"response": []
+				},
+				{
+					"name": "updateCourse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"AWS Básico\",\r\n    \"acronym\": \"AWS-Base\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/courses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/courses/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "getStudents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/students"
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentsOrderByAge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/students/orderByAge"
+					},
+					"response": []
+				},
+				{
+					"name": "getStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/students/1"
+					},
+					"response": []
+				},
+				{
+					"name": "createStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Cristian Rolando\",\r\n    \"lastName\":\"Martelo Perez\",\r\n    \"dni\":\"85296478\",\r\n    \"age\":25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/students"
+					},
+					"response": []
+				},
+				{
+					"name": "updateStudent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Federico Avelardo\",\r\n    \"lastName\":\"Pino Ibanto\",\r\n    \"dni\":\"32165492\",\r\n    \"age\":25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/students/1"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/students/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enrollments",
+			"item": [
+				{
+					"name": "getEnrollments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/enrollments"
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollmentsGroupByCourse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/enrollments/groupByCourseReport"
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/enrollments/1"
+					},
+					"response": []
+				},
+				{
+					"name": "createEnrollment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idStudent\": 2,\r\n    \"details\": [\r\n        {\r\n            \"idCourse\": 1,\r\n            \"classroom\": \"A501\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/enrollments"
+					},
+					"response": []
+				},
+				{
+					"name": "updateEnrollment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idStudent\": 2,\r\n    \"details\": [\r\n        {\r\n            \"idCourse\": 1,\r\n            \"classroom\": \"A501\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/enrollments/1"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEnrollment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/enrollments/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
